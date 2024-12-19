@@ -16,11 +16,34 @@
              <input type="text" id="last-name" required></label>
             <label for="email">Enter Your Email:
              <input type="email" id="email" required></label>
-            <label for="new-password">Create a New Password: <input type="password" id="new-password" required></label>
+            <label for="new-password">Create a New Password: <input type="password" id="new-password" pattern="[a-z0-5]{8,}" required></label>
         </fieldset>
-        <fieldset></fieldset>
-        <fieldset></fieldset>
+        <fieldset>
+            <legend>Account type (required)</legend>
+            <label for="personal-account">
+                <input type="radio" id="personal-account" name="account-type" checked> Personal
+            </label>
+            <label for="business-account">
+                <input type="radio" id="business-account" name="account-type"> Business
+            </label>
+        </fieldset>
+        <fieldset>
+            <label>Upload a profile picture:<input type="file" name=""></label>
+            <label>Input your age (years):<input type="number" name="" min="13" max="120"></label>
+            <label for="">How did you hear about us?
+                <select name="hear-about-us" id="hear-about-us">
+                    <option value="">(select one)</option>
+                    <option value="1">freeCodeCamp News</option>
+                    <option value="2">freeCodeCamp YouTube Channel
+                    </option>
+                    <option value="3">freeCodeCamp Forum
+                    </option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+        </fieldset>
         <input type="submit" value="Submit">
+        <label for="terms-and-conditions"><input type="checkbox" name="" id="terms-and-conditions" required>I accept the<a href="https://www.freecodecamp.org/news/terms-of-service/"> terms and conditions</a></label>
     </form>
 </body>
 </html>
